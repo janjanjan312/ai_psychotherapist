@@ -88,26 +88,26 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         }
 
         const data = await response.json();
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('username', username);
+        // localStorage.setItem('token', data.token);
+        // localStorage.setItem('username', username);
         
-        // 获取URL中的redirect参数
-        const urlParams = new URLSearchParams(window.location.search);
-        const redirectPath = urlParams.get('redirect');
+        // // 获取URL中的redirect参数
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const redirectPath = urlParams.get('redirect');
         
-        if (redirectPath) {
-            // 如果有redirect参数，直接跳转到该路径
-            window.location.href = redirectPath;
-        } else {
-            // 如果没有redirect参数，检查localStorage中是否有redirectAfterLogin
-            const redirectPage = localStorage.getItem('redirectAfterLogin');
-            if (redirectPage) {
-                localStorage.removeItem('redirectAfterLogin');
-                window.location.href = `/${redirectPage}.html`;
-            } else {
-                window.location.href = '/chat.html';
-            }
-        }
+        // if (redirectPath) {
+        //     // 如果有redirect参数，直接跳转到该路径
+        //     window.location.href = redirectPath;
+        // } else {
+        //     // 如果没有redirect参数，检查localStorage中是否有redirectAfterLogin
+        //     const redirectPage = localStorage.getItem('redirectAfterLogin');
+        //     if (redirectPage) {
+        //         localStorage.removeItem('redirectAfterLogin');
+        //         window.location.href = `/${redirectPage}.html`;
+        //     } else {
+        //         window.location.href = '/chat.html';
+        //     }
+        // }
     } catch (error) {
         console.error('Login error:', error);
         alert(error.message || 'Login failed. Please try again.');
@@ -190,14 +190,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('username', username);
                     
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const redirectPath = urlParams.get('redirect');
+                    // const urlParams = new URLSearchParams(window.location.search);
+                    // const redirectPath = urlParams.get('redirect');
                     
-                    if (redirectPath) {
-                        window.location.href = redirectPath;
-                    } else {
-                        window.location.href = '/index.html';
-                    }
+                    // if (redirectPath) {
+                    //     window.location.href = redirectPath;
+                    // } else {
+                    //     window.location.href = '/index.html';
+                    // }
                 } else {
                     const errorMessage = data.message || data.error || 'Login failed: ' + response.status;
                     console.error('Login error:', errorMessage);
@@ -249,11 +249,11 @@ async function handleLogin(event) {
         const urlParams = new URLSearchParams(window.location.search);
         const redirectPath = urlParams.get('redirect');
         
-        if (redirectPath) {
-            window.location.href = redirectPath;
-        } else {
-            window.location.href = '/chat.html';
-        }
+        // if (redirectPath) {
+        //     window.location.href = redirectPath;
+        // } else {
+        //     window.location.href = '/chat.html';
+        // }
     } catch (error) {
         console.error('登录错误:', error);
         showError(`登录失败: ${error.message}`);

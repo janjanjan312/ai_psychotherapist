@@ -43,15 +43,15 @@ async function displayMessage(content, type) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// 在页面加载时检查登录状态
-document.addEventListener('DOMContentLoaded', function() {
-    const token = localStorage.getItem('token');
-    if (!token) {
-        // 如果没有token，重定向到登录页面
-        window.location.href = '/auth.html';
-        return;
-    }
-});
+// // 在页面加载时检查登录状态
+// document.addEventListener('DOMContentLoaded', function() {
+//     const token = localStorage.getItem('token');
+//     if (!token) {
+//         // 如果没有token，重定向到登录页面
+//         window.location.href = '/auth.html';
+//         return;
+//     }
+// });
 
 // 发送消息的函数
 async function handleSendMessage() {
@@ -75,7 +75,7 @@ async function handleSendMessage() {
         });
 
         if (response.status === 401 || response.status === 403) {
-            window.location.href = '/auth.html';
+            // window.location.href = '/auth.html';
             return;
         }
 

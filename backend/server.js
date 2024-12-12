@@ -7,9 +7,9 @@ const path = require('path');
 require('dotenv').config();
 const OpenAI = require('openai');
 const authRouter = require('./routes/auth');  // 添加这行来导入 auth 路由
-const passport = require('passport');
-const GitHubStrategy = require('passport-github2');
-const session = require('express-session');
+// const passport = require('passport');
+// const GitHubStrategy = require('passport-github2');
+// const session = require('express-session');
 
 const app = express();
 const port = process.env.NODE_ENV === 'production' ? 3000 : 3001;
@@ -286,9 +286,9 @@ app.use('/api/*', (req, res) => {
 app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 // 最后是页面路由
-app.get('/chat', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/chat.html'));
-});
+// app.get('/chat', (req, res) => {
+//    res.sendFile(path.join(__dirname, '../frontend/public/chat.html'));
+// });
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
@@ -305,18 +305,18 @@ app.use((err, req, res, next) => {
 });
 
 // GitHub OAuth 配置
-passport.use(new GitHubStrategy({
-    clientID: process.env.GITHUB_CLIENT_ID,
-    clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.NODE_ENV === 'production'
-        ? 'https://solid-giggle-694r6rwrw4vxh599g-3000.app.github.dev/api/auth/github/callback'
-        : 'http://localhost:3000/api/auth/github/callback'
-}, function(accessToken, refreshToken, profile, cb) {
-    return cb(null, profile);
-}));
+// passport.use(new GitHubStrategy({
+//     clientID: process.env.GITHUB_CLIENT_ID,
+//     clientSecret: process.env.GITHUB_CLIENT_SECRET,
+//     callbackURL: process.env.NODE_ENV === 'production'
+//         ? 'https://solid-giggle-694r6rwrw4vxh599g-3000.app.github.dev/api/auth/github/callback'
+//         : 'http://localhost:3000/api/auth/github/callback'
+// }, function(accessToken, refreshToken, profile, cb) {
+//     return cb(null, profile);
+// }));
 
 // 初始化 Passport
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 // 添加环境检测
 const isProduction = process.env.NODE_ENV === 'production';
@@ -327,26 +327,26 @@ const callbackURL = isProduction
 console.log('Current environment:', process.env.NODE_ENV);
 console.log('Using callback URL:', callbackURL);
 
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
-    }
-}));
+// app.use(session({
+//     secret: 'your-secret-key',
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//         secure: process.env.NODE_ENV === 'production',
+//         sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+//     }
+// }));
 
-app.use(passport.session());
+// app.use(passport.session());
 
 // 序列化用户
-passport.serializeUser(function(user, done) {
-    done(null, user);
-});
+// passport.serializeUser(function(user, done) {
+//     done(null, user);
+// });
 
-passport.deserializeUser(function(user, done) {
-    done(null, user);
-});
+// passport.deserializeUser(function(user, done) {
+//     done(null, user);
+// });
 
 app.listen(port, () => {
     console.log('Environment:', process.env.NODE_ENV);
