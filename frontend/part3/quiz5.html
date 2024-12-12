@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 5/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>5. How do these symptoms affect your emotional well-being?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="emotional" value="frustration">
+                Frequent frustration
+            </label>
+            <label class="option">
+                <input type="checkbox" name="emotional" value="stress">
+                Increased stress
+            </label>
+            <label class="option">
+                <input type="checkbox" name="emotional" value="confidence">
+                Low self-confidence
+            </label>
+            <label class="option">
+                <input type="checkbox" name="emotional" value="mood">
+                Mood swings
+            </label>
+            <label class="option">
+                <input type="checkbox" name="emotional" value="anxiety">
+                Anxiety about tasks
+            </label>
+            <label class="option">
+                <input type="checkbox" name="emotional" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='quiz4.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz6.html'">Next</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 

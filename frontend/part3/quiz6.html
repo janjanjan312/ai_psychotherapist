@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 6/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>6. Have you sought help for these symptoms before?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="help" value="therapy">
+                Attended therapy
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="medication">
+                Tried medication
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="coaching">
+                Worked with a coach
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="support">
+                Joined support groups
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="self">
+                Self-help strategies
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="none">
+                No previous help sought
+            </label>
+            <label class="option">
+                <input type="checkbox" name="help" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='quiz5.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='../../public/result.html'">See Results</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 

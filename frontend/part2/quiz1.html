@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="quiz-page part2">
+    <div class="content-container">
+        <div class="progress">Part 2. Question 1/9</div>
+        
+        <h1>Assessment</h1>
+        
+        <div class="question">
+            <p>1. Do you often fidget or squirm with your hands or feet? And how was that during childhood?</p>
+            
+            <div class="section-title">Examples during adulthood:</div>
+            <div class="options">
+                <label class="option">
+                    <input type="checkbox" name="adult" value="fidgeting">
+                    Fidgeting with hands or feet
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="squirming">
+                    Squirming in seat
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="restless">
+                    Feeling restless
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="relaxing">
+                    Difficulty relaxing
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="sitting">
+                    Difficulty sitting still for long
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="other">
+                    Other
+                    <input type="text" class="other-input" placeholder="Please specify...">
+                </label>
+            </div>
+
+            <div class="section-title">Examples during childhood:</div>
+            <div class="options">
+                <label class="option">
+                    <input type="checkbox" name="child" value="fidgeting">
+                    Fidgeting with hands or feet
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="squirming">
+                    Squirming in seat
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="restless">
+                    Feeling restless
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="sitting">
+                    Difficulty sitting still
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="other">
+                    Other
+                    <input type="text" class="other-input" placeholder="Please specify...">
+                </label>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="nav-button next-button">Next</button>
+            <button class="nav-button back-button">Previous</button>
+        </div>
+    </div>
+
+    <script src="/scripts/quiz.js"></script>
+</body>
+</html> 

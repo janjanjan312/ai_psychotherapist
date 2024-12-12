@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="title-section">
+            <h1>Explore Your<br>Neural Diversity</h1>
+            <div class="journey-text">
+                Neural diversity refers to the variety of neural architectures, patterns, and functional mechanisms.
+                <br><br>
+                Neural diversity also offers a framework for exploring differences in mental functioning, including variations such as ADHD (Attention-Deficit/Hyperactivity Disorder) and ASD (Autism Spectrum Disorder), which highlight the breadth of human cognitive and neural variability.
+            </div>
+        </div>
+        <div class="button-section">
+            <button class="nav-button next-button" onclick="location.href='/part1/intro.html'">Quiz to Know Myself</button>
+            <button id="chatButton" class="nav-button">Talk to Our AI Psychotherapist</button>
+        </div>
+    </div>
+    <button id="logoutButton">log out</button>
+    <script src="src/main.js"></script>
+    <script src="scripts/index.js"></script>
+    <script>
+        console.log(document.getElementById('chatButton').outerHTML);
+    </script>
+</body>
+</html>

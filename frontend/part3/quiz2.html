@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 2/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>2. How do these symptoms affect your education?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="education" value="grades">
+                Poor grades
+            </label>
+            <label class="option">
+                <input type="checkbox" name="education" value="homework">
+                Difficulty completing homework
+            </label>
+            <label class="option">
+                <input type="checkbox" name="education" value="studying">
+                Trouble studying
+            </label>
+            <label class="option">
+                <input type="checkbox" name="education" value="attention">
+                Can't pay attention in class
+            </label>
+            <label class="option">
+                <input type="checkbox" name="education" value="assignments">
+                Late assignments
+            </label>
+            <label class="option">
+                <input type="checkbox" name="education" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='quiz1.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz3.html'">Next</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 

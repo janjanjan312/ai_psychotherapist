@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 3/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>3. How do these symptoms affect your relationships?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="relationships" value="listening">
+                Difficulty listening to others
+            </label>
+            <label class="option">
+                <input type="checkbox" name="relationships" value="interrupting">
+                Interrupting others
+            </label>
+            <label class="option">
+                <input type="checkbox" name="relationships" value="forgetful">
+                Being forgetful in relationships
+            </label>
+            <label class="option">
+                <input type="checkbox" name="relationships" value="attention">
+                Trouble paying attention in conversations
+            </label>
+            <label class="option">
+                <input type="checkbox" name="relationships" value="impulsive">
+                Making impulsive decisions
+            </label>
+            <label class="option">
+                <input type="checkbox" name="relationships" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='quiz2.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz4.html'">Next</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 4/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>4. How do these symptoms affect your daily life?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="daily" value="organization">
+                Poor home organization
+            </label>
+            <label class="option">
+                <input type="checkbox" name="daily" value="chores">
+                Forgetting to do chores
+            </label>
+            <label class="option">
+                <input type="checkbox" name="daily" value="bills">
+                Late paying bills
+            </label>
+            <label class="option">
+                <input type="checkbox" name="daily" value="appointments">
+                Missing appointments
+            </label>
+            <label class="option">
+                <input type="checkbox" name="daily" value="routine">
+                Difficulty maintaining routine
+            </label>
+            <label class="option">
+                <input type="checkbox" name="daily" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='quiz3.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz5.html'">Next</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 

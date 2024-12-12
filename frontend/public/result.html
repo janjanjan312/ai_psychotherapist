@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/result.css">
+</head>
+<body class="quiz-page">
+    <div class="content-container">
+        <div class="title-section">
+            <h1>Your Test Result</h1>
+            <div class="result-box">
+                <div class="result-text"></div>
+            </div>
+        </div>
+        <div class="button-section">
+            <button class="nav-button" onclick="location.href='/'">Back to Home</button>
+            <button class="nav-button" onclick="checkAndRedirect('chat')">Talk to Our AI Psychotherapist</button>
+        </div>
+    </div>
+    <script src="/scripts/result.js"></script>
+    <script>
+    function checkAndRedirect(destination) {
+        const token = localStorage.getItem('token');
+        if (token) {
+            if (destination === 'chat') {
+                window.location.href = '/chat.html';
+            }
+        } else {
+            localStorage.setItem('redirect_after_login', destination);
+            window.location.href = '/auth.html';
+        }
+    }
+    </script>
+</body>
+</html> 

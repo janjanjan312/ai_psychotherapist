@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="quiz-page part1">
+    <div class="content-container">
+        <div class="progress">Part 1. Question 1/9</div>
+
+        <h1>Assessment</h1>
+        
+        <div class="question">
+            <p>1. Do you often fail to give close attention to detail, or do you make careless mistakes in your work or during other activities? And how was that during childhood?</p>
+            
+            <div class="section-title">Examples during adulthood:</div>
+            <div class="options">
+                <label class="option">
+                    <input type="checkbox" name="adult" value="careless">
+                    Makes careless mistakes
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="slow">
+                    Works slowly to avoid mistakes
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="instructions">
+                    Does not read instructions carefully
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="detailed">
+                    Difficulty working in a detailed way
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="time">
+                    Too much time needed to complete detailed tasks
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="bogged">
+                    Gets easily bogged down by details
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="quick">
+                    Works too quickly and therefore makes mistakes
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="adult" value="other">
+                    Other
+                    <input type="text" class="other-input" placeholder="Please specify...">
+                </label>
+            </div>
+
+            <div class="section-title">Examples during childhood:</div>
+            <div class="options">
+                <label class="option">
+                    <input type="checkbox" name="child" value="schoolwork">
+                    Careless mistakes in schoolwork
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="questions">
+                    Mistakes made by not reading questions properly
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="unanswered">
+                    Leaves questions unanswered by not reading them properly
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="reverse">
+                    Leaves the reverse side of a test unanswered
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="comments">
+                    Others comment about careless work
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="homework">
+                    Not checking the answers in homework
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="time">
+                    Too much time needed to complete detailed tasks
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="child" value="other">
+                    Other
+                    <input type="text" class="other-input" placeholder="Please specify...">
+                </label>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz2.html'">Next</button>
+            <button class="nav-button" onclick="location.href='intro.html'">Previous</button>
+        </div>
+    </div>
+
+    <script src="/src/main.js"></script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+</html> 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../public/styles/main.css">
+</head>
+<body class="quiz-page part3">
+    <div class="progress">Part 3. Question 1/6</div>
+    <h1>Assessment</h1>
+    
+    <div class="question">
+        <p>1. How do these symptoms affect your work life?</p>
+        
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" name="work" value="deadlines">
+                Missing deadlines
+            </label>
+            <label class="option">
+                <input type="checkbox" name="work" value="organization">
+                Poor organization
+            </label>
+            <label class="option">
+                <input type="checkbox" name="work" value="procrastination">
+                Procrastination
+            </label>
+            <label class="option">
+                <input type="checkbox" name="work" value="mistakes">
+                Making careless mistakes
+            </label>
+            <label class="option">
+                <input type="checkbox" name="work" value="focus">
+                Difficulty maintaining focus
+            </label>
+            <label class="option">
+                <input type="checkbox" name="work" value="other">
+                Other
+                <input type="text" class="other-input" placeholder="Please specify...">
+            </label>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button back-button" onclick="location.href='intro.html'">Back</button>
+        <button class="nav-button next-button" onclick="saveSelections(); location.href='quiz2.html'">Next</button>
+    </div>
+
+    <script src="../../public/scripts/quiz.js"></script>
+</body>
+</html> 
